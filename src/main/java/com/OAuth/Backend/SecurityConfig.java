@@ -20,7 +20,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorizeRequests->
                         authorizeRequests.anyRequest().authenticated())
 //                .formLogin(form->form.defaultSuccessUrl("/hello", true));
-                .oauth2Login(oauth2->oauth2.defaultSuccessUrl("/hello", true));
+                .oauth2Login(oauth2->oauth2.defaultSuccessUrl("http://localhost:3000/dashboard", true));
         return http.build();
     }
 }
